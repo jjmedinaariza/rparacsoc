@@ -1,0 +1,38 @@
+--- 
+title: "R para ciencias sociales"
+author: "Juanjo Medina"
+date: "`r Sys.Date()`"
+site: bookdown::bookdown_site
+output: bookdown::gitbook
+documentclass: book
+bibliography: [book.bib, packages.bib]
+biblio-style: apalike
+link-citations: yes
+github-repo: jjmedinaariza/bookdown-rparacsoc
+description: "This is a minimal example of using the bookdown package to write a book. The output format for this example is bookdown::gitbook."
+---
+
+# Notas para usuarios
+
+Este libro pretende ofrecer una introducción al uso de R y RStudio para el análisis de datos en las ciencias sociales. Esta basado en los materiales que he venido usando como profesor de esta materia en la Universidad de Manchester, aunque adaptados para una audiencia mas general y escritos en mi lengua materna. Estos materiales reflejan mi particular trayecto personal a la hora de entender la pedagogía del análisis de datos para el alumno en ciencias sociales y mi percepción de lo que funciona en este ámbito. Cuando hace 25 años empecé a dar clases de análisis de datos, el énfasis de la mayor parte de los materiales se centraba en el calculo algebraico, el uso de ejemplos “de juguete” para la realización de estos cálculos, y la organización bastante canónica de múltiples “robots” (tests) para solucionar de forma mecánica distintos escenarios (más o menos realistas) de análisis. El único modelo inferencial era el frecuentista. Las practicas con programas de análisis de datos constituían el suplemento a las clases teóricas. En Estados Unidos donde empecé en mi ámbito académico se trabajaba con SAS, en el Reino Unido donde continué SPSS, sobre todo, y STATA, en los postgrados más avanzados, eran las aplicaciones que se empleaban. Así aprendí yo y así empecé a ensañar yo. Esta forma tradicional de encarar la docencia de los análisis de datos tenia, sin duda, algunas ventajas, pero también desventajas. 
+Mucho ha llovido desde entonces: el desarrollo tecnológico y la aparición de la ciencia de datos como “the new cool kid in the block” y el consecuente acentuamiento de la necesidad de desarrollar ciudadanos con un grado suficiente de alfabetización digital; la irrupción de ideas pedagógicas como la clase invertida (“flipped clasroom”); el énfasis en la necesidad de aprender usando bases de datos reales que aproximen la practica profesional; la necesidad de integrar de forma más holística la formación cuantitativa fuera del gueto de las asignaturas de análisis de datos, así como la importancia de integrar las ideas de diseño metodológico y “domain-knowledge” en las asignaturas de análisis de datos; la transición en las ciencias sociales de pasar a usar sobre todo datos rectangulares de encuestas y administrativos (mas o menos estáticos) a nuevas formas de datos más complejos, dinámicos y de mayor volumen; la aparición de autores, como Chris Wild, que proponen la importancia del desarrollo del entendimiento intuitivo antes de entrar en el tratamiento más matemático (sobre todo en cursos introductorios); etc. 
+
+Mi docencia se ha visto afectada por estas tendencias y ahora presta mucha más atención en el tiempo en el aula dedicado al desarrollo de ejercicios prácticos. El 70% de asistencia del alumno se desarrolla en el aula informática haciendo ejercicios prácticos utilizando RStudio procesando y analizando bases de datos. El componente teórico se ofrece por medio de videos pregrabados y lecturas de manuales mas tradicionales. Pero el acento lo ponemos en el desarrollo de habilidades practicas de manejo de datos.
+
+
+```{r eval=FALSE}
+install.packages("bookdown")
+# or the development version
+# devtools::install_github("rstudio/bookdown")
+```
+
+Remember each Rmd file contains one and only one chapter, and a chapter is defined by the first-level heading `#`.
+
+To compile this example to PDF, you need XeLaTeX. You are recommended to install TinyTeX (which includes XeLaTeX): <https://yihui.name/tinytex/>.
+
+```{r include=FALSE}
+# automatically create a bib database for R packages
+knitr::write_bib(c(
+  .packages(), 'bookdown', 'knitr', 'rmarkdown'
+), 'packages.bib')
+```
